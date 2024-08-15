@@ -1,3 +1,3 @@
 layout: page
-title: "testPage"
+title: "testpage"
 permalink: /testpage
