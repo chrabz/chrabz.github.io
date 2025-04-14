@@ -86,7 +86,8 @@ const musicFiles = [
     "Voix 087_.mp3",
     "Voix 088_.mp3",
     "Vyage.mp3",
-    "Western.mp3"
+    "Western.mp3",
+    "conte.mp3"
 ];
 
 const musicList = document.getElementById("music-list");

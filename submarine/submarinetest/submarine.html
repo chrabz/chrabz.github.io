@@ -9,256 +9,76 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Submarine.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Submarine" startnode="34" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="F2607D30-7B5F-42B2-B0C7-1D5AE70A461A" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="wake up" tags="" position="800,325" size="100,100">You wake up in a bed. Everything in the room looks unfamiliar. There is one window and one door.
-(if: $lives &gt; 0)[(set: $lives to $lives - 1)]
-(if: $lives &gt; 1)[You have $lives lives.]
-(if: $lives is 1)[This is your last life.]
-(if: $lives is 0)[You are not ready for the afterlife]
+<tw-storydata name="The Submarine" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="F2607D30-7B5F-42B2-B0C7-1D5AE70A461A" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="wake up" tags="" position="800,325" size="100,100">You wake up in a bed. Everything in the room looks unfamiliar. There is one window and one door.
 
 [[Go to the window]]
-[[Go to the door]]
-
-
-(set: $counter to 97)
- |amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="2" name="Go to the window" tags="" position="800,475" size="100,100">You can see a light in the horizon. Everything else is pitchblack.
+[[Go to the door]]</tw-passagedata><tw-passagedata pid="2" name="Go to the window" tags="" position="800,475" size="100,100">You can see a light in the horizon. Everything else is pitchblack.
 
 [[Go to the door]] 
-[[Jump out of the window]]
-
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="3" name="Go to the door" tags="" position="975,325" size="100,100">You open the door. There is a corridor with what seems to be a thousand of other doors.
-[[Try to open a random door]]
+[[Jump out of the window]]</tw-passagedata><tw-passagedata pid="3" name="Go to the door" tags="" position="975,325" size="100,100">You open the door. There is a corridor with what seems to be a thousand of other doors.
+[[Try to open a door]]
 [[Look for a specific door]]
-[[Walk through the corridor]]
+[[Walk through the corridor]]</tw-passagedata><tw-passagedata pid="4" name="Jump out of the window" tags="" position="625,475" size="100,100">[[wake up]]
+[[sink in the void]]
+[[get in the submarine]]</tw-passagedata><tw-passagedata pid="5" name="sink in the void" tags="" position="625,600" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="get in the submarine" tags="" position="750,600" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Try to open a door" tags="" position="1000,475" size="100,100">The door is locked.
 
-|amount&gt;[$counter]
-(live: 0.6s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]
-
-
-
-</tw-passagedata><tw-passagedata pid="4" name="Jump out of the window" tags="" position="625,475" size="100,100">(set: $fall to $fall+1)
-[[wake up]]
-[[sink into the void]]
-(if: $fall is 6 and $alive)[[get in the submarine]]</tw-passagedata><tw-passagedata pid="5" name="get in the submarine" tags="" position="625,750" size="100,100">3 people are in a tunnel where they can&#39;t see the end on both side.
-The first says it is infinite, they can walk either way forever.
-The second says it is a huge circle; if they walk forward they will just arrive where they came from.
-The third says it&#39;s finite and wants to see the exit.
-The first and the third leave to see who is right. The second stays there, certain that she will see them later.</tw-passagedata><tw-passagedata pid="6" name="Try to open a random door" tags="" position="975,475" size="100,100">This door is locked.
-
-[[Try another door |Try to open a random door]]
-[[Walk through the corridor]] 
-
- |amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="7" name="Walk through the corridor" tags="" position="1125,325" size="100,100">You walk through the corridor. You see an exit sign at the end.
+[[Try another door |Try to open a door]]
+[[Walk through the corridor]] </tw-passagedata><tw-passagedata pid="8" name="Walk through the corridor" tags="" position="1125,325" size="100,100">You walk through the corridor. You see an exit sign at the end.
 
 [[Stop walking]]
-[[Reach for the exit sign]]
-
-|amount&gt;[$counter]
-(live: 0.6s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="8" name="Stop walking" tags="" position="1125,475" size="100,100">When you stop walking, the corridor continues to unfold past you.
+[[Reach for the exit sign]]</tw-passagedata><tw-passagedata pid="9" name="Stop walking" tags="" position="1125,475" size="100,100">When you stop walking, the corridor continues to unfold past you.
 
 [[Continue walking]]
-[[Watch the corridor going]]
-
- |amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="9" name="Continue walking" tags="" position="1050,625" size="100,100">You walk through the corridor. You see an exit sign at the end.
-
-[[Stop walking]]
-[[Reach for the exit sign|Exit 2]]
-
-(set:_t to 0)
-|amount&gt;[$counter]
-(live: 0.3s)[
-(set:_t to it+1)
-(set: $counter to (nth:_t, 4, 8, 15, 16, 23, 42))
-(replace: ?amount)[$counter]]
-</tw-passagedata><tw-passagedata pid="10" name="Watch the corridor going" tags="" position="1250,600" size="100,100">You watch the corridor going past you.
-
- |amount&gt;[$counter]
-(live: 0.1s)[(set: $counter to it -1)
-(if: $counter is 0 and $memory1)[[Feel alive]]
-(if: $counter is 0) [[Feel dead]]
-(if: $counter is 0)[(stop:)]
-(replace: ?amount)[$counter]]
-</tw-passagedata><tw-passagedata pid="11" name="Reach for the exit sign" tags="" position="1275,325" size="100,100">You are in front of the exit door.
+[[Watch the corridor going]]</tw-passagedata><tw-passagedata pid="10" name="Continue walking" tags="" position="1125,600" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="Watch the corridor going" tags="" position="1250,600" size="100,100">You watch the corridor going past you.
+[[Feel alive]]
+[[Feel dead]]</tw-passagedata><tw-passagedata pid="12" name="Reach for the exit sign" tags="" position="1275,325" size="100,100">You are in front of the exit door.
 
 [[Open the door]]
-[[Look behind you]]
-
-|amount&gt;[$counter]
-(live: 0.3s)[(set: $counter to it -1)
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="12" name="Feel alive" tags="" position="1200,750" size="100,100">(set: $alive to true)
-[[wake up]]</tw-passagedata><tw-passagedata pid="13" name="Feel dead" tags="" position="1375,750" size="100,100">[[wake up]] </tw-passagedata><tw-passagedata pid="14" name="Open the door" tags="" position="1450,325" size="100,100">[[Exit]]</tw-passagedata><tw-passagedata pid="15" name="Look behind you" tags="" position="1275,450" size="100,100">The corridor looks smaller than when you walked through it.
+[[Look behind you]]</tw-passagedata><tw-passagedata pid="13" name="Feel alive" tags="" position="1250,725" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="Feel dead" tags="" position="1375,725" size="100,100"></tw-passagedata><tw-passagedata pid="15" name="Open the door" tags="" position="1450,325" size="100,100">[[Exit]]</tw-passagedata><tw-passagedata pid="16" name="Look behind you" tags="" position="1275,450" size="100,100">The corridor looks smaller than when you walked through it.
 
 [[Go back to the exit door |Reach for the exit sign]]
-[[Walk back through the corridor]]
+[[Walk back through the corridor]]</tw-passagedata><tw-passagedata pid="17" name="Walk back through the corridor" tags="" position="1450,450" size="100,100">There are seven roses in front of your door.
 
-$counter</tw-passagedata><tw-passagedata pid="16" name="Walk back through the corridor" tags="" position="1450,450" size="100,100">There are seven roses in front of your door.
-
-[[Take the roses and continue your way |Three Doors Puzzle]]
+[[Take the roses and continue your way ||Three Doors Puzzle]]
 [[Enter the room]]
-[[Take the roses and enter the room]]
+[[Take the roses and enter the room]]</tw-passagedata><tw-passagedata pid="18" name="Enter the room" tags="" position="1425,600" size="100,100">You see yourself sleeping.
 
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it +1)
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="17" name="Enter the room" tags="" position="1450,600" size="100,100">You see yourself sleeping.
-
-[[wake up]]</tw-passagedata><tw-passagedata pid="18" name="Take the roses and enter the room" tags="" position="1625,600" size="100,100">(if: $counter is not 106) [You are not supposed to be here now.
-Close the game please.]
+[[wake up]]</tw-passagedata><tw-passagedata pid="19" name="Take the roses and enter the room" tags="" position="1575,600" size="100,100">You are not supposed to be here now.
+Close the game please.
 
 
-(if: $counter is 106) [The radio is on. &lt;audio src=&quot;https://chrabz.github.io/submarine/submarinemusic/lincoln.mp3&quot; autoplay&gt;]
-</tw-passagedata><tw-passagedata pid="19" name="Three Doors Puzzle" tags="" position="1625,450" size="100,100">[&lt;audio src=&quot;https://chrabz.github.io/submarine/submarinemusic/conte.mp3&quot; autoplay&gt;]
-(set: $rosesleft to 9)
-(set: $rosefirst to 0)
-(set: $rosesecond to 0)
-(set: $rosethird to 0)
-You see three doors.
+&lt;audio src=&quot;https://chrabz.github.io/submarine/submarinemusic/lincoln.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="20" name="Three Doors Puzzle" tags="" position="1650,450" size="100,100">You see three doors.
 Above the first is a half circle, cut horizontaly.
 Above the second is a full circle, higher than the half circle.
 Above the third is a crescent.
 
-|status&gt;[
-{
-(if: $rosefirst is 4 and $rosesecond is 2 and $rosethird is 3)[
-[[wake up]]
-]
-(else:)[
-(if: $rosesleft is 1)[There is one rose left] (if: $rosesleft is 0)[No roses are left] (if: $rosesleft &gt; 1)[There are $rosesleft roses left]
+[[Put a rose in front of the first door|Three Doors Puzzle]]
+[[Put a rose in front of the second door|Three Doors Puzzle]]
+[[Put a rose in front of the third door|Three Doors Puzzle]]
 
+[[Take a rose in front of the first door|Three Doors Puzzle]]
+[[Take a rose in front of the second door|Three Doors Puzzle]]
+[[Take a rose in front of the third door|Three Doors Puzzle]]
 
-(if: $rosefirst &gt;1)[There are [$rosefirst] roses in front of the first door] (if: $rosefirst &lt; 2)[There is [$rosefirst] rose in front of the first door]
-(if: $rosesecond &gt;1)[There are [$rosesecond] roses in front of the second door] (if: $rosesecond &lt; 2)[There is [$rosesecond] rose in front of the second door]
-(if: $rosethird &gt;1)[There are [$rosethird] roses in front of the third door] (if: $rosethird &lt; 2)[There is [$rosethird] rose in front of the third door]
-
-(if: $rosesleft is not 0)[
-(link-rerun: &quot;Put a rose in front of the first door&quot;)[(set: $rosefirst to $rosefirst+1) (set: $rosesleft to $rosesleft-1) (rerun: ?status)]
-(link-rerun: &quot;Put a rose in front of the second door&quot;)[(set: $rosesecond to $rosesecond+1) (set: $rosesleft to $rosesleft-1) (rerun: ?status)]
-(link-rerun: &quot;Put a rose in front of the third door&quot;)[(set: $rosethird to $rosethird+1) (set: $rosesleft to $rosesleft-1) (rerun: ?status)]
-]
-
-(if: $rosefirst &gt;0)[(link-rerun:&quot;Take a rose in front of the first door&quot;)[(set: $rosefirst to $rosefirst -1)  (set: $rosesleft to $rosesleft+1) (rerun: ?status)]]
-(if: $rosesecond &gt;0)[(link-rerun: &quot;Take a rose in front of the second door&quot;)[(set: $rosesecond to $rosesecond-1)  (set: $rosesleft to $rosesleft+1)  (rerun: ?status)]]
-(if: $rosethird &gt;0)[(link-rerun: &quot;Take a rose in front of the third door&quot;)[(set: $rosethird to $rosethird-1)  (set: $rosesleft to $rosesleft+1)  (rerun: ?status)]]
-]}
-]
-
-[[I am not here for puzzles|wake up]]
-
-(set: $counter to 97)
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter &lt; 80) [Dawn, Noon, and Night]
-(if: $counter &lt; 60) [What did the Sphinx Ask?]
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]
-
-</tw-passagedata><tw-passagedata pid="20" name="Look for a specific door" tags="" position="900,150" size="100,100">(set: $door to (prompt: &quot;What door?:&quot;, &quot;0&quot;))
-{
-(if: $door is &quot;423&quot;)[
-[[Door 423]]
-]
-(else-if: $door is &quot;39715&quot;)[
-[[Door 39715]]
-]
-(else-if: $door is &quot;4815162342&quot;)[
-[[Exit 2]]
-]
-(else:)[
-incorrect door number
-]
-}
-[[Look for a specific door]] 
-[[Walk through the corridor]] 
-
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="21" name="Exit" tags="" position="1625,325" size="100,100">Am I free to go?
+[[wake up]]</tw-passagedata><tw-passagedata pid="21" name="Look for a specific door" tags="" position="975,200" size="100,100">
+[[Door 423]]</tw-passagedata><tw-passagedata pid="22" name="Exit" tags="" position="1625,325" size="100,100">Am I free to go?
 [[Yes]]
-[[No]]</tw-passagedata><tw-passagedata pid="22" name="Yes" tags="" position="1750,200" size="100,100">Are you here to replace me?
+[[No]]</tw-passagedata><tw-passagedata pid="23" name="Yes" tags="" position="1750,200" size="100,100">Are you here to replace me?
 [[Yes|Replace]]
-[[No]]</tw-passagedata><tw-passagedata pid="23" name="No" tags="" position="1775,325" size="100,100">You should wake up then.
-[[wake up]] </tw-passagedata><tw-passagedata pid="24" name="Replace" tags="" position="1925,200" size="100,100">[[You see the exit door]]
+[[No]]</tw-passagedata><tw-passagedata pid="24" name="No" tags="" position="1750,325" size="100,100"></tw-passagedata><tw-passagedata pid="25" name="Replace" tags="" position="1925,200" size="100,100">[[You see the exit door]]
 Exit
-Turn Back</tw-passagedata><tw-passagedata pid="25" name="You see the exit door" tags="" position="2075,200" size="100,100">[[You can see a light on the horizon. Everything else is pitch black|Other Light]]
+Turn Back</tw-passagedata><tw-passagedata pid="26" name="You see the exit door" tags="" position="2075,200" size="100,100">[[You can see a light on the horizon. Everything else is pitch black|Other Light]]
 Go to the light
-Sink in the void</tw-passagedata><tw-passagedata pid="26" name="Other Light" tags="" position="2200,200" size="100,100">[[As you reach the light you feel peace growing inside you|Peace]]
+Sink in the void</tw-passagedata><tw-passagedata pid="27" name="Other Light" tags="" position="2200,200" size="100,100">[[As you reach the light you feel peace growing inside you|Peace]]
 Let the light grow
-Go back to the darkness</tw-passagedata><tw-passagedata pid="27" name="Peace" tags="" position="2325,200" size="100,100">[[You make one with the light and close your eyes.]]
+Go back to the darkness</tw-passagedata><tw-passagedata pid="28" name="Peace" tags="" position="2325,200" size="100,100">[[You make one with the light and close your eyes.]]
 Let go
-Wake up</tw-passagedata><tw-passagedata pid="28" name="You make one with the light and close your eyes." tags="" position="2475,200" size="100,100">[[The End]]</tw-passagedata><tw-passagedata pid="29" name="The End" tags="" position="2600,200" size="100,100"></tw-passagedata><tw-passagedata pid="30" name="Door 423" tags="" position="900,0" size="100,100">Oh thank god! Are you one of the dev?
+Wake up</tw-passagedata><tw-passagedata pid="29" name="You make one with the light and close your eyes." tags="" position="2475,200" size="100,100">[[The End]]</tw-passagedata><tw-passagedata pid="30" name="The End" tags="" position="2600,200" size="100,100"></tw-passagedata><tw-passagedata pid="31" name="Door 423" tags="" position="975,50" size="100,100">Oh thank god! Are you one of the dev?
 [[yes|dev]]
-[[no|notdev]]
+[[no|notdev]]</tw-passagedata><tw-passagedata pid="32" name="dev" tags="" position="1100,50" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="notdev" tags="" position="1100,175" size="100,100">I see... You do not know what you are doing here right? You don&#39;t even know who &quot;you&quot; are...
 
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="31" name="dev" tags="" position="1100,0" size="100,100">(set: $dev to (prompt: &quot;What is your nametag?&quot;, &quot;enter your nametag&quot;))
-{
-(if: $dev is &quot;jeanborgeat6700&quot;)[
-I have a special hint for you.
-[[Thanks|hintalive]]
-]
-(else:)[
-You&#39;re not on my list.
-[[I tried|notdev]]
-]
-}
-[[I misspelled it|dev]]
-
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="32" name="notdev" tags="" position="1100,150" size="100,100">I see... so it wasn&#39;t to hard.
-
-[[What am I doing here?|the question]]
-
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="33" name="the question" tags="" position="1275,150" size="100,100">You are proving I&#39;m right!
-I just need a bit of your help.
-When you wake up, tune the roses to 106.
-
-[[Why? What does it mean?|wake up]] 
-
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="34" name="setfall" tags="" position="650,325" size="100,100">(set: $fall to 0)
-(set: $lives to 7)
-(set: $memory1 to false)
-(set: $alive to false)
-[[wake up]] </tw-passagedata><tw-passagedata pid="35" name="sink into the void" tags="" position="425,475" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="hintalive" tags="" position="1275,0" size="100,100">You must let go and feel alive before you jump.
-You can now remember me when your life flashes before your eyes.
-(set: $memory1 to true)
-[[wake up]]
-
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata><tw-passagedata pid="37" name="Exit 2" tags="" position="1050,750" size="100,100">You broke it.
-[[wake up]]</tw-passagedata><tw-passagedata pid="38" name="Door 39715" tags="" position="725,0" size="100,100">This is the dev here. 
-I&#39;m sure you would benefit from a break.
-If you have nothing in mind, I can recommend you my youtube channel.
-
-|amount&gt;[$counter]
-(live: 1s)[(set: $counter to it -1)
-(if: $counter is 0)[(go-to: &quot;wake up&quot;)]
-(replace: ?amount)[$counter]]</tw-passagedata></tw-storydata>
+[[What am I doing here?|the question]]</tw-passagedata><tw-passagedata pid="34" name="the question" tags="" position="1250,175" size="100,100">You&#39;re here to tell them that they forgot me here... 
+Can you answer to Jean Borgeat&#39;s comment </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
