@@ -64,3 +64,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.document-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 12pt; /* espace après chaque paragraphe */
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

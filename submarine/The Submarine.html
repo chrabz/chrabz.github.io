@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Submarine.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Submarine" startnode="34" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="F2607D30-7B5F-42B2-B0C7-1D5AE70A461A" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="wake up" tags="" position="575,1050" size="100,100">You wake up in a bed. Everything in the room looks unfamiliar. There is one window and one door.
+<tw-storydata name="The Submarine" startnode="34" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="F2607D30-7B5F-42B2-B0C7-1D5AE70A461A" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="wake up" tags="" position="575,1050" size="100,100">You wake up in a bed. Everything in the room looks unfamiliar. There is one window and one door.
 (if: $lives &gt; 0)[(set: $lives to $lives - 1)]
 (if: $lives &gt; 1)[You have $lives lives.]
 (if: $lives is 1)[This is your last life.]
@@ -130,7 +130,7 @@ Close the game please.]
 (set: $rosesecond to 0)
 (set: $rosethird to 0)
 You see three doors.
-Above the first is a half circle, cut horizontaly.
+Above the first is a half circle, horizontally cut.
 Above the second is a full circle, higher than the half circle.
 Above the third is a crescent.
 
@@ -411,9 +411,13 @@ One swam to the depths of the world, where nothing is everything.
 One walked to the mountain, where hell meets heaven.
 One flew to the Moon, to watch the other two. 
 
-[[wake UP!]]</tw-passagedata><tw-passagedata pid="48" name="wake UP!" tags="" position="300,575" size="100,100">
+[[wake UP!]]</tw-passagedata><tw-passagedata pid="48" name="wake UP!" tags="" position="300,575" size="100,100">&lt;img src=&quot;https://chrabz.github.io/submarine/submarineimage/wakeup.png&quot;&gt;
 
-[[Further]]</tw-passagedata><tw-passagedata pid="49" name="Further" tags="" position="300,425" size="100,100">[[Somewhere]]</tw-passagedata><tw-passagedata pid="50" name="Somewhere" tags="" position="300,275" size="100,100">[[Elsewhere]]</tw-passagedata><tw-passagedata pid="51" name="Elsewhere" tags="" position="300,125" size="100,100"></tw-passagedata></tw-storydata>
+[[Further]] </tw-passagedata><tw-passagedata pid="49" name="Further" tags="" position="300,425" size="100,100">&lt;img src=&quot;https://chrabz.github.io/submarine/submarineimage/zoom1.png&quot;&gt;
+
+[[Somewhere]]</tw-passagedata><tw-passagedata pid="50" name="Somewhere" tags="" position="300,275" size="100,100">&lt;img src=&quot;https://chrabz.github.io/submarine/submarineimage/zooom2.png&quot;&gt;
+
+[[Elsewhere]]</tw-passagedata><tw-passagedata pid="51" name="Elsewhere" tags="" position="300,125" size="100,100">(text-colour:red)[Thank] (text-color:cyan)[you] (text-color:lime)[for] [[playing!|wake up]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
